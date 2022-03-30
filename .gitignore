@@ -1,0 +1,17 @@
+**/.DS_Store
+
+
+# ignore ckip models
+**/model_ner
+**/model_pos
+**/model_ws
+
+**/embedding_character
+**/embedding_word
+
+**/data.zip
+**/*.xml
+
+**/__pycache__
+**/export
+
