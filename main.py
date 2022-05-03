@@ -12,7 +12,7 @@ import argparse
 import pickle
 
 parser = argparse.ArgumentParser(description="Hello BERTopics")
-parser.add_argument('--topic_num', type=int, default=10, help='設置要分成幾個topic')
+parser.add_argument('--topic_num', type=int, default=10, help='設置要取出頻率排名前幾的topics')
 parser.add_argument('--keyword_file', type=str, default="keys.txt", help='設置讀取keyword檔案名稱')
 parser.add_argument('--model_name', type=str, default="ckiplab/bert-base-chinese-ws", help="設置HuggingFace的PretrainModel名稱")
 parser.add_argument('--data_file', type=str, default="example_data.csv", help="設置資料讀取位置")
