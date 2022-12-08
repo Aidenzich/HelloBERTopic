@@ -30,6 +30,17 @@ DBSCAN 的演算法假設個群集間的密度(Density)是相同的，然而當�
 
 另外，HDBSCAN也保留了DBSCAN的特性，會自動對資料進行分群，而不用使用者自己設定分群數量。
 
+### Other Clustering Method
+如果不想要 HDBSCAN 演算法自動做分群，可以採用以下方法更換成 `KMeans` 或 `Birch` 分群演算法，細節參照官方文件
+- [link](https://maartengr.github.io/BERTopic/getting_started/clustering/clustering.html#visual-overview)
+```python
+from bertopic import BERTopic
+from sklearn.cluster import KMeans
+
+cluster_model = KMeans(n_clusters=50)
+topic_model = BERTopic(hdbscan_model=cluster_model)
+```
+
 
 ## 專案結構
 ```
