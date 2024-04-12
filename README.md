@@ -1,7 +1,16 @@
-# helloBERTopic
+# HelloBERTopic
 本專案用來對 [BERTopic](https://github.com/MaartenGr/BERTopic) 進行一些應用、摘要與實驗
 - [BERTopic文章](https://towardsdatascience.com/topic-modeling-with-bert-779f7db187e6)
 - [論文](https://arxiv.org/abs/2203.05794)
+
+## 安裝
+- 我們使用 conda 來建立環境，並安裝相依套件 https://docs.anaconda.com/free/miniconda/miniconda-install/
+
+```
+conda create --name bertopic python=3.9
+conda activate bertopic
+pip3 install -r requirements.txt
+```
 
 ## 執行結果
 若成功執行完`main.py` 檔案，會在export資料夾中產生以下html檔案：
@@ -13,6 +22,11 @@ tot_fig.html
 ### Topics Bar
 ![TopicsBar](./imgs/bar_plot.png)
 
+### Topic Over Time
+![TopicOverTime](./imgs/topic_over_time.png)
+
+### Intertopic Distance Map
+![IntertopicDistanceMap](./imgs/intertopic_distance_map.png)
 
 ## 運作原理
 BERTopic 透過對詞向量做 UMAP 降維特徵提取後，採用 HDBSCAN 來進行非監督式的分群動作。
